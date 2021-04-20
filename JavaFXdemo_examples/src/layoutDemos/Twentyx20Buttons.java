@@ -38,7 +38,25 @@ public class Twentyx20Buttons extends Application{
 		
 		Button startButt = new Button("Start"); 
 		Button b002 = new Button("2"); 
-
+		
+		Button [] buttArr = new Button[20];
+		
+		for(int i = 0; i < 20; i++) {
+			buttArr[i] = new Button(String.valueOf(i));
+			gPane.add(buttArr[i], i, 0);
+		}
+		
+		
+		hPane.getChildren().addAll(startButt, b002);
+		vPane.getChildren().add(hPane);
+		vPane.getChildren().add(gPane);
+		
+		Scene sc = new Scene(vPane, 1000, 700);
+		primaryStage.setScene(sc);
+		primaryStage.setX(7400);  // start location on desktop.
+		primaryStage.setY(100);
+		primaryStage.show();
+	}
 	
 	public static void main(String[] args) {
 		Application.launch(args);

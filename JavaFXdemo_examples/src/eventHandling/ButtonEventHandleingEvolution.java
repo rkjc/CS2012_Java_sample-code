@@ -4,6 +4,7 @@ package eventHandling;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,6 +20,7 @@ public class ButtonEventHandleingEvolution extends Application {
 
 		HBox hPane = new HBox(10); // the 10 is the space between the buttons (nodes)
 		hPane.setAlignment(Pos.CENTER);
+		hPane.setPadding(new Insets(15, 15, 15, 15));
 		
 		// ------------------------------------------------
 		// Separate non-anonymous handler
