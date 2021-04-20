@@ -38,7 +38,7 @@ public class MouseClicksDifferentSquares extends Application {
 				if (obj instanceof Rectangle) {
 					//System.out.println("is rectangle");
 					System.out.println(((Rectangle) obj).getUserData());
-					myz.consume();
+					//myz.consume();
 				} else if (obj instanceof Pane) {
 					//System.out.println("is pane");
 					System.out.println(((Pane) obj).getUserData());

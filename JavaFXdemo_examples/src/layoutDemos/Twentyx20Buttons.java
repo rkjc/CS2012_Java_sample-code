@@ -35,19 +35,39 @@ public class Twentyx20Buttons extends Application{
 		VBox vPane = new VBox(10);
 		GridPane gPane = new GridPane();
 		
+		Label buttonPushed = new Label("button pushed");	
+		Label countTimer = new Label("count timer");	
+		Label showRandom = new Label("random number");	
+		Label durration = new Label("durration");	
 		
-		Button startButt = new Button("Start"); 
-		Button b002 = new Button("2"); 
+		int numRows = 20;
+		int numCols = 20;
 		
-		Button [] buttArr = new Button[20];
+		EventHandler<ActionEvent> handleButton = new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent xyz) {
+				Integer buttNum = parseValue(xyz);
+				System.out.println(buttNum);
+				buttonPushed.setText(buttNum.toString());
+			}
+		};
 		
-		for(int i = 0; i < 20; i++) {
-			buttArr[i] = new Button(String.valueOf(i));
-			gPane.add(buttArr[i], i, 0);
+		Button [][] bttArr = new Button[numRows][numCols];
+		
+		Integer count = 100;
+		for(int i = 0; i < numRows; i++) {
+			for(int j = 0; j < numCols; j++) {
+				bttArr[i][j] = new Button(count.toString());
+				//bttArr[i][j] = new Button();
+				bttArr[i][j].setOnAction(handleButton);
+				gPane.add(bttArr[i][j], j, i);
+				count++;
+			}
 		}
 		
+
+		hPane.getChildren().addAll(buttonPushed, countTimer, showRandom, durration);
 		
-		hPane.getChildren().addAll(startButt, b002);
 		vPane.getChildren().add(hPane);
 		vPane.getChildren().add(gPane);
 		
@@ -57,6 +77,14 @@ public class Twentyx20Buttons extends Application{
 		primaryStage.setY(100);
 		primaryStage.show();
 	}
+
+	public static Integer parseValue(ActionEvent xyz) {
+		String input = xyz.getSource().toString();
+		Integer startVal = input.indexOf('\'');
+		String subIn = input.substring(startVal+1, input.length()-1);
+		return Integer.valueOf(subIn);
+	}
+	
 	
 	public static void main(String[] args) {
 		Application.launch(args);
