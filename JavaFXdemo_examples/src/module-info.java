@@ -9,4 +9,5 @@ module javafxdemo_examples {
 	exports helloButton;
 	exports layoutDemos;
 	exports eventHandling;
+	exports animations;
 }

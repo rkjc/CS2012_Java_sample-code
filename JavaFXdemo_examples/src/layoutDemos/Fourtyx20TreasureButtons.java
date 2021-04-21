@@ -15,6 +15,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class Fourtyx20TreasureButtons extends Application {
@@ -49,6 +52,8 @@ public class Fourtyx20TreasureButtons extends Application {
 
 
 		Button startButt = new Button("Start");
+		startButt.setMinWidth(0);
+		
 		Button clear = new Button("clear");
 		clear.setOnAction(xyz -> { doButton(xyz); });
 
@@ -57,9 +62,12 @@ public class Fourtyx20TreasureButtons extends Application {
 		
 		for (int r = 0; r < numRows; r++) {
 			for (int c = 0; c < numCols; c++) {
-				buttArr[r][c] = new Button();
+				buttArr[r][c] = new Button("");
 				Point buttLocTemp = new Point(r,c);
 				buttArr[r][c].setUserData(buttLocTemp);
+				buttArr[r][c].setFont(Font.font(1));
+				buttArr[r][c].setMinWidth(20);
+				buttArr[r][c].setMinHeight(20);
 				buttArr[r][c].setOnAction(xyz -> { doButton(xyz); });
 				gPane.add(buttArr[r][c], c, r);
 			}
@@ -70,7 +78,8 @@ public class Fourtyx20TreasureButtons extends Application {
 		vPane.getChildren().add(hPane);
 		vPane.getChildren().add(gPane);
 
-		Scene sc = new Scene(vPane, 1000, 700);
+		//Scene sc = new Scene(vPane, 1000, 700);
+		Scene sc = new Scene(vPane);
 		primaryStage.setScene(sc);
 		primaryStage.setX(7400); // start location on desktop.
 		primaryStage.setY(100);
@@ -81,8 +90,6 @@ public class Fourtyx20TreasureButtons extends Application {
 		Object obj = bxz.getSource();
 		Point tp = new Point( (Point)((Button) obj).getUserData() );
 		System.out.println( tp.locR + "  " + tp.locC);
-		
-		
 		
 		Double dist = Math.sqrt( Math.pow((tp.locR - treasureR), 2) + Math.pow((tp.locC - treasureC), 2));
 		System.out.println(dist);
