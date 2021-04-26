@@ -1,0 +1,24 @@
+.arthur{
+    -fx-background-color: #FFFF00;
+    -fx-text-fill: #00DDFF;
+}
+
+.beatrice{
+    -fx-font-size: 500%;
+}
+
+.amstyle{
+    -fx-background-color: #FFFF00;
+    -fx-text-fill: #00DDFF;
+    -fx-font-size: 300%;
+}
+
+.pmstyle{
+    -fx-background-color: #FF00FF;
+    -fx-text-fill: #00FF00;
+    -fx-font-size: 400%;
+}
+
+.timestyle{
+    -fx-font-size: 200%;
+}

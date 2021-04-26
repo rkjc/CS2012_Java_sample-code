@@ -33,7 +33,7 @@ public class MediaDemo extends Application {
 		String bob = "happy";
 
 		try {
-			//File mediaFile = new File("02_Come_With_Me_Now.mp3");
+			// File mediaFile = new File("02_Come_With_Me_Now.mp3");
 			File mediaFile = new File("SingAlong.mp4");
 			songLocString = mediaFile.toURI().toURL().toExternalForm();
 		} catch (Exception e) {
@@ -44,7 +44,9 @@ public class MediaDemo extends Application {
 		Media media = new Media(songLocString);
 		MediaPlayer mediaPlayer = new MediaPlayer(media);
 		MediaView mediaView = new MediaView(mediaPlayer);
-		mediaView.autosize();
+		mediaView.setFitHeight(300);
+		mediaView.setPreserveRatio(true);
+		// mediaView.autosize();
 
 		Button playButton = new Button(">");
 		playButton.setOnAction(e -> {
@@ -76,14 +78,14 @@ public class MediaDemo extends Application {
 		bPane.setBottom(hBox);
 
 		mediaPlayer.play();
-		
+
 		// Create a scene and place it in the stage
-		Scene scene = new Scene(bPane);
-		//Scene scene = new Scene(bPane, 650, 500);
+		// Scene scene = new Scene(bPane);
+		Scene scene = new Scene(bPane, 650, 500);
 		primaryStage.setTitle("MediaDemo"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
-//		primaryStage.setX(7400); // start location on desktop.
-//		primaryStage.setY(100);
+		primaryStage.setX(7400); // start location on desktop.
+		primaryStage.setY(100);
 		primaryStage.show(); // Display the stage
 	}
 

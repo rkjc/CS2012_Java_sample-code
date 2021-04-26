@@ -33,6 +33,7 @@ InheritanceExercise2
 JavaFXdemo_Collection
 #JavaFXdemo_examples
 JavaFXdemo_examples/src/solutions
+#JavaFXdemo_examples/src/suppliment
 #JavaFXdemo_setup
 JavaFX_Pasture_part_1
 JavaFX_Pasture_part_2
@@ -70,7 +71,8 @@ bin/
 
 
 # a bash function for doing quick gitHub updates
-# cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; }
+
+#  cupdate() {  git add . ; git commit -m "quick code update" ; git push origin main ; } 
 
 # note to self because I always forget this one when resetting the .gitignore
 #  git rm -r --cached . 

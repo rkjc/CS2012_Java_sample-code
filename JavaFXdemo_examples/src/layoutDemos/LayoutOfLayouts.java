@@ -21,6 +21,7 @@ public class LayoutOfLayouts extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage theStage) {
 		
+		System.out.println("hey there");
 		// ------------------------------------------------
 		// -- zone of shapes and nodes  --
 		// Create a circle and set its properties
@@ -33,26 +34,25 @@ public class LayoutOfLayouts extends Application {
 		// StackPane.setAlignment(mycircle, Pos.CENTER_LEFT);
 		StackPane.setAlignment(circ01, Pos.CENTER);
 
-		Circle circ02 = new Circle();
-		circ02.setRadius(10);
-		circ02.setStroke(Color.RED);
-		circ02.setFill(Color.SKYBLUE);
-
-		Circle circ03 = new Circle();
-		circ03.setCenterX(370);
-		circ03.setCenterY(400);
-		circ03.setRadius(20);
-		circ03.setStroke(Color.GREEN);
-		circ03.setFill(Color.LIME);
+		
+		 Circle circ02 = new Circle(); circ02.setRadius(10);
+		 circ02.setStroke(Color.RED); circ02.setFill(Color.SKYBLUE);
+		  
+		 Circle circ03 = new Circle(); circ03.setCenterX(370); circ03.setCenterY(400);
+		 circ03.setRadius(20); circ03.setStroke(Color.GREEN);
+		 circ03.setFill(Color.LIME);
+		 
+		
 		// StackPane.setAlignment(mycircle, Pos.CENTER_LEFT);
 		//StackPane.setAlignment(mycircle, Pos.CENTER);
 		
 		// -----------------------------------------------------
 		//  --- Controls building section ----
 		
-		Label lb01 = new Label("label 01");
+		//Label lb01 = new Label("label 01");
+		//lb01.setStyle
 		
-		Button btn01 = new Button("button 01");
+		//Button btn01 = new Button("button 01");
 
 		// -------------------------------------------------------------
 		//  -- land of Pane ---
@@ -105,7 +105,7 @@ public class LayoutOfLayouts extends Application {
 		gp01.setMinHeight(10);
 		// gp01.setMaxWidth(100);
 		gp01.setMinWidth(100);
-		gp01.setStyle("-fx-background-color: cyan; -fx-border-color: red; -fx-border-width: 3; ");
+		gp01.setStyle("-fx-background-color: cyan; -fx-border-color: red; -fx-border-width: 1; ");
 
 
 		HBox hb01 = new HBox();
