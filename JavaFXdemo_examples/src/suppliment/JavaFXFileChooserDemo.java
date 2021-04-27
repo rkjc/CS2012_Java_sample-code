@@ -45,11 +45,14 @@ public class JavaFXFileChooserDemo extends Application {
 
 
 		stage.setScene(scene);
-		stage.setX(7400);  // start location on desktop.
-		stage.setY(100);
+		stage.setX(7400);  // start location on desktop. *** make sure to change or disable
+		stage.setY(100);   // start location on desktop. *** make sure to change or disable
 		stage.show();
 	}
 
+	// ################################################################################
+	
+	// --------------------------------------------------------------------------------
 	
 	private MenuBar setUpMenuBar(Stage stage, TextArea atext) {
 		MenuBar menuBar = new MenuBar();
@@ -70,6 +73,7 @@ public class JavaFXFileChooserDemo extends Application {
 				FileChooser fileChooser = new FileChooser();
 				
 				File file = fileChooser.showOpenDialog(stage);
+				
 				if (file != null) {
 					atext.setText(getFileContents(file));
 				}
@@ -84,7 +88,6 @@ public class JavaFXFileChooserDemo extends Application {
 				
 				File file = fileChooser.showSaveDialog(stage);
 				if (file != null) {	
-					//atext.setText(getFileContents(file));
 					try {
 						PrintWriter prtout = new PrintWriter(file);
 						String outText = atext.getText();
@@ -179,7 +182,7 @@ public class JavaFXFileChooserDemo extends Application {
 		return helpMenu;
 	}
 
-	
+// ###############################################################################
 		
 	private String getFileContents(File file) {
 		StringBuilder sb = new StringBuilder();

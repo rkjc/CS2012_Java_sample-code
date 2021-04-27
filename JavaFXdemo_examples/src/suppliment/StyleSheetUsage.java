@@ -21,9 +21,11 @@ public class StyleSheetUsage extends Application {
 		vbx.setSpacing(50);
 		vbx.setAlignment(Pos.BASELINE_CENTER);
 		Scene sc = new Scene(vbx, 600, 300);
-		// sc.getStylesheets().add("style.css");
+		//sc.getStylesheets().add("style.css");
+		
 		//sc.getStylesheets().add(getClass().getResource("/styleSheets/style3.css").toExternalForm());
-		sc.getStylesheets().add(getClass().getResource("style2.css").toExternalForm());
+		
+		sc.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
 		Label lab1 = new Label("Hello with style!");
 		lab1.getStyleClass().add("zondar");

@@ -1,9 +1,9 @@
-.arthur{
+.zondar{
     -fx-background-color: #FFFF00;
     -fx-text-fill: #00DDFF;
 }
 
-.beatrice{
+.xaver{
     -fx-font-size: 500%;
 }
 
@@ -21,4 +21,9 @@
 
 .timestyle{
     -fx-font-size: 200%;
+    -fx-background-color: cyan;
+}
+
+Label {
+-fx-background-color: #3377aa;
 }
