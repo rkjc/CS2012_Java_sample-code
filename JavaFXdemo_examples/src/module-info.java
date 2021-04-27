@@ -4,6 +4,7 @@ module javafxdemo_examples {
 	requires javafx.controls;
 	requires javafx.media;
 	
+	exports controlsUI;
 	exports suppliment;
 	exports solutions;
 	exports shapesAndDrawing;

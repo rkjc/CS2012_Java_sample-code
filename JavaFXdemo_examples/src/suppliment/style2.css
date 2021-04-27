@@ -1,0 +1,21 @@
+
+
+
+.zondar{
+    -fx-background-color: #FFFF00;
+    -fx-text-fill: #00DDFF;
+}
+
+.xaver{
+    -fx-font-size: 500%;
+}
+
+.timestyle{
+    -fx-font-size: 200%;
+    -fx-text-fill: white;
+}
+
+Label { -fx-background-color: #0000FF; }
+
+
+#bob { -fx-font-weight: bold; -fx-background-color: red; } 

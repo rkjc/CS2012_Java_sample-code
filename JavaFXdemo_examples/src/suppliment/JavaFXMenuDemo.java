@@ -90,5 +90,4 @@ public class JavaFXMenuDemo extends Application {
 		helpMenu.getItems().add(aboutItem);
 		return helpMenu;
 	}
-
 }

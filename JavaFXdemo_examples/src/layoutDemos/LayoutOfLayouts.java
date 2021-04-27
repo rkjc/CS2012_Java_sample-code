@@ -31,8 +31,8 @@ public class LayoutOfLayouts extends Application {
 		circ01.setRadius(10);
 		circ01.setStroke(Color.RED);
 		circ01.setFill(Color.SKYBLUE);
-		// StackPane.setAlignment(mycircle, Pos.CENTER_LEFT);
-		StackPane.setAlignment(circ01, Pos.CENTER);
+		StackPane.setAlignment(circ01, Pos.BOTTOM_CENTER);
+		//StackPane.setAlignment(circ01, Pos.CENTER);
 
 		
 		 Circle circ02 = new Circle(); circ02.setRadius(10);

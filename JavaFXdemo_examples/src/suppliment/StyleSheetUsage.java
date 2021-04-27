@@ -22,17 +22,21 @@ public class StyleSheetUsage extends Application {
 		vbx.setAlignment(Pos.BASELINE_CENTER);
 		Scene sc = new Scene(vbx, 600, 300);
 		// sc.getStylesheets().add("style.css");
-		sc.getStylesheets().add(getClass().getResource("style3.css").toExternalForm());
+		//sc.getStylesheets().add(getClass().getResource("/styleSheets/style3.css").toExternalForm());
+		sc.getStylesheets().add(getClass().getResource("style2.css").toExternalForm());
 
 		Label lab1 = new Label("Hello with style!");
-		lab1.getStyleClass().add("arthur");
-		lab1.getStyleClass().add("beatrice");
+		lab1.getStyleClass().add("zondar");
+		lab1.getStyleClass().add("xaver");
 
 		Label lab2 = new Label("current time:  " + LocalDateTime.now());
 //		Text lab2 = new Text("current time:  " + LocalDateTime.now());
 //		lab2.setX(10);
 //		lab2.setY(10);
 		lab2.getStyleClass().add("timestyle");
+		
+		Label lab3 = new Label("A new improved label");
+		lab3.setId("bob");
 		
 		boolean am = getAm();
 
@@ -44,6 +48,7 @@ public class StyleSheetUsage extends Application {
 //		s.getChildren().add(lab2);
 		vbx.getChildren().add(lab1);
 		vbx.getChildren().add(lab2);
+		vbx.getChildren().add(lab3);
 		
 		primaryStage.setScene(sc);
 		primaryStage.show();
