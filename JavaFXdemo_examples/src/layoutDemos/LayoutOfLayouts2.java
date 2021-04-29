@@ -11,11 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -34,10 +37,11 @@ public class LayoutOfLayouts2 extends Application {
 	static Integer numCols = 4;
 	static Integer numRows = 3;
 	static Pane[][] paneBunch;
+	Text text = new Text(50, 50, "JavaFX Programming");
 
 	@Override // Override the start method in the Application class
 	public void start(Stage theStage) {
-
+		
 		System.out.println("hey there");
 		// ------------------------------------------------
 
@@ -140,7 +144,7 @@ public class LayoutOfLayouts2 extends Application {
 		vb02.setAlignment(Pos.TOP_LEFT);
 
 		// ==================================================
-		// === Content added to indivdule grid cells ===
+		// === Content added to individual grid cells ===
 		// entry box example
 		GridPane gPaneSamp = new GridPane();
 		gPaneSamp.setAlignment(Pos.CENTER);
@@ -180,6 +184,11 @@ public class LayoutOfLayouts2 extends Application {
 		paneBunch[0][0].getChildren().addAll(vb20);
 
 		paneBunch[2][1].getChildren().addAll(tx);
+		
+		//----------------------------------------------------
+		//radio and buttons demo pane
+		
+
 
 		// =============================
 		// Window structure and content

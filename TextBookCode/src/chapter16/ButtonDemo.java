@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 public class ButtonDemo extends Application {
@@ -16,10 +17,12 @@ public class ButtonDemo extends Application {
   
   protected BorderPane getPane() {
     HBox paneForButtons = new HBox(20);
-    Button btLeft = new Button("Left", 
-      new ImageView("image/left.gif"));
-    Button btRight = new Button("Right", 
-      new ImageView("image/right.gif"));   
+    //Button btLeft = new Button("Left", new ImageView("image/left.gif"));
+    Circle circ01 = new Circle();
+    Button btLeft = new Button("Left", new ImageView());
+    //Button btLeft = new Button("Left");
+//    Button btRight = new Button("Right", new ImageView("image/right.gif"));  
+    Button btRight = new Button("Right");  
     paneForButtons.getChildren().addAll(btLeft, btRight);
     paneForButtons.setAlignment(Pos.CENTER);
     paneForButtons.setStyle("-fx-border-color: green");

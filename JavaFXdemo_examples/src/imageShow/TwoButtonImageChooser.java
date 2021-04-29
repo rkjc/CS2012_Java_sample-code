@@ -29,7 +29,7 @@ public class TwoButtonImageChooser extends Application {
 		// --------------------------------------------------------------------
 		VBox vbox1 = new VBox(10); // the attribute sets the space between nodes
 		vbox1.setPadding(new Insets(15, 15, 15, 15)); // sets space around the edges
-		vbox1.setStyle(" -fx-border-color: red; -fx-border-width: 2; ");
+		//vbox1.setStyle(" -fx-border-color: red; -fx-border-width: 2; ");
 
 		HBox hbox1 = new HBox(10);
 		hbox1.setPadding(new Insets(15, 15, 15, 15));
@@ -40,8 +40,8 @@ public class TwoButtonImageChooser extends Application {
 		imageHolder1.setPreserveRatio(true);
 
 		// --------------------------------------------------------------------
-		Text txt1 = new Text("Text at the top of the VBox stack");
-		Text txt2 = new Text("Text at the bottom of the VBox stack");
+		Text txt1 = new Text("Text in the middle of the VBox stack");
+
 		Button btn1 = new Button();
 		Button btn2 = new Button();
 		Button btn3 = new Button();
@@ -49,13 +49,14 @@ public class TwoButtonImageChooser extends Application {
 
 		File imgFile1 = new File("robotRineo.jpg"); // in default Eclipse file location
 		String imgFileloc1 = imgFile1.toURI().toURL().toExternalForm(); // the Image constructor needs an absolute path.
-		Image image1 = new Image(imgFileloc1);
+		Image image1 = new Image(imgFileloc1);  
+		//Image image1 = new Image("robotRineo.jpg");  <-- DOES NOT WORK!!!
 
 		Image image2 = new Image(new File("images/SpaceSuit.jpg").toURI().toURL().toExternalForm());
 		Image image3 = new Image(new File("images/crazyCat.jpg").toURI().toURL().toExternalForm());
 
-		//ImageView btnPic = new ImageView(image3);
-		ImageView btnPic = new ImageView("crazyCat.jpg");
+		ImageView btnPic = new ImageView(image3);
+		//ImageView btnPic = new ImageView("crazyCat.jpg");  <-- DOES NOT WORK!!!
 		
 		btnPic.setFitWidth(50);
 		btnPic.setPreserveRatio(true);
@@ -71,48 +72,35 @@ public class TwoButtonImageChooser extends Application {
 		circ01.setFill(Color.LIME);
 
 		Polygon polygon01 = new Polygon();
-		polygon01.getPoints().addAll(new Double[] { 0.0, 0.0, 40.0, 20.0, 0.0, 40.0, 20.0, 20.0});
-		polygon01.setRotate(180);
+		polygon01.getPoints().addAll(new Double[] { 0.0, 0.0, 40.0, 20.0, 0.0, 40.0});
 		polygon01.setStroke(Color.RED);
 		polygon01.setFill(Color.LIME);
-
+		polygon01.setRotate(180);
+		
 		btn4.setGraphic(polygon01);
 		// --------------------------------------------------------------------
-		btn1.setText("This is Button ONE");
-//		btn1.setOnAction(new EventHandler<ActionEvent>() {
-//			@Override
-//			public void handle(ActionEvent event) {
-//				System.out.println("Button One pushed");
-//				txt1.setText("Button ONE pushed");
-//				imageHolder1.setImage(image1);
-//			}
-//		});
+		btn1.setText("Show Armored Rino");
 
 		btn1.setOnAction(xyz -> {
-			// System.out.println("Button One pushed");
-			txt1.setText("Button ONE pushed");
+			txt1.setText("Rino Button pushed");
 			imageHolder1.setImage(image1);
 		});
 
-		btn2.setText("This is Button TWO");
-		btn2.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				System.out.println("Button Two pushed");
-				txt1.setText("Button TWO pushed");
+		btn2.setText("Show Space Suit");
+		btn2.setOnAction( abc -> {
+				txt1.setText("Space Suit Button pushed");
 				imageHolder1.setImage(image2);
-			}
+		});
+		
+		btn4.setOnAction( abc -> {
+				txt1.setText("Clear Button pushed");
+				imageHolder1.setImage(null);
 		});
 		// --------------------------------------------------------------------
 
 		hbox1.getChildren().addAll(btn1, btn2, btn3, btn4);
 
-//		vbox1.getChildren().add(hbox1);
-//		vbox1.getChildren().add(txt1);
-//		vbox1.getChildren().add(txt2);
-		vbox1.getChildren().addAll(hbox1, txt1, txt2);
-
-		vbox1.getChildren().add(imageHolder1);
+		vbox1.getChildren().addAll(hbox1, txt1, imageHolder1);
 
 		Scene sc = new Scene(vbox1, 650, 500);
 		// Scene sc = new Scene(vbox1);
