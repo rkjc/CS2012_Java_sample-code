@@ -3,35 +3,37 @@ package chapter17;
 import java.io.*;
 
 public class TestDataStream {
-  public static void main(String[] args) throws IOException {
-    try ( // Create an output stream for file temp.dat
-      DataOutputStream output =
-        new DataOutputStream(new FileOutputStream("temp.dat"));
-    ) {
-      // Write student test scores to the file
-//      output.writeUTF("John");
-//      output.writeDouble(85.5);
+
+	public static void main(String[] args) throws IOException {
+		try ( // Create an output stream for file temp.dat
+				DataOutputStream output = new DataOutputStream(new FileOutputStream("boring.dll"));) {
+			// Write student test scores to the file
+			output.writeUTF("John");
+      output.writeDouble(86875647565.534);
 //      output.writeUTF("Jim");
 //      output.writeDouble(185.5);
 //      output.writeUTF("George");
 //      output.writeDouble(105.25);
     	output.writeLong(5);
-    	output.writeInt(0);
-    	output.writeInt(5);
-    }
-    
-    try ( // Create an input stream for file temp.dat
-      DataInputStream input =
-        new DataInputStream(new FileInputStream("temp.dat"));
-    ) {
-      // Read student test scores from the file
-//      System.out.println(input.readUTF() + " " + input.readDouble());
-//      System.out.println(input.readUTF() + " " + input.readDouble());
-//      System.out.println(input.readUTF() + " " + input.readDouble());
+			//output.writeUTF("5");
+		output.writeInt(5);
+    	output.writeDouble(5);
+		}
 
-    	System.out.println(input.readLong());
-    	System.out.println(input.readInt());
-    	System.out.println(input.readInt());
-    }
-  }
+		try ( // Create an input stream for file temp.dat
+			DataInputStream datinput = new DataInputStream(new FileInputStream("boring.dll"));) {
+			// Read student test scores from the file
+			// System.out.println(datinput.readUTF());
+			System.out.println(datinput.readUTF() + " " + datinput.readDouble());
+//			System.out.println(datinput.readUTF() + " " + datinput.readDouble());
+//			System.out.println(datinput.readUTF() + " " + datinput.readDouble());
+
+    	//System.out.println(datinput.readLong());
+			//System.out.println(datinput.readUTF());
+			System.out.println(datinput.readInt());
+			System.out.println(datinput.readInt());
+			System.out.println(datinput.readInt());
+//    	System.out.println(datinput.readInt());
+		}
+	}
 }

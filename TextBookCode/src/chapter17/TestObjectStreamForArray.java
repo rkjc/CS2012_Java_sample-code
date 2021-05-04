@@ -3,8 +3,10 @@ package chapter17;
 import java.io.*;
 
 public class TestObjectStreamForArray {
-  public static void main(String[] args)
-      throws ClassNotFoundException, IOException {
+	
+	
+  public static void main(String[] args) throws ClassNotFoundException, IOException {
+	  
     int[] numbers = {1, 2, 3, 4, 5};
     String[] strings = {"John", "Susan", "Kim"};
 
@@ -17,11 +19,14 @@ public class TestObjectStreamForArray {
       output.writeObject(strings);
     }
 
+    
+    
     try ( // Create an input stream for file array.dat
       ObjectInputStream input =
         new ObjectInputStream(new FileInputStream("array.dat"));
     ) {
-      int[] newNumbers = (int[])(input.readObject());
+    	
+      int[] newNumbers = (int[]) ( input.readObject() );
       String[] newStrings = (String[])(input.readObject());
   
       // Display arrays
@@ -33,4 +38,6 @@ public class TestObjectStreamForArray {
         System.out.print(newStrings[i] + " ");
     }
   }
+  
+  
 }
