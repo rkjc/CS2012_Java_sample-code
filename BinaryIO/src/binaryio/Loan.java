@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 
-public class Loan {
+public class Loan implements Serializable {
 	private Double annualInterestRate;
 	private Integer numberOfYears;
 	private Double loanAmount;
