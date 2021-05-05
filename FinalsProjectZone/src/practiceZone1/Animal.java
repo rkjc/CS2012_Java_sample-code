@@ -1,4 +1,4 @@
-package finalspractice;
+package practiceZone1;
 
 public class Animal {
 
@@ -8,5 +8,4 @@ public class Animal {
 	// Enum type of animal prey(0) predator(1)
 	// String sound it makes
 	
-	// include an abstract method: String getInfo()
 }
