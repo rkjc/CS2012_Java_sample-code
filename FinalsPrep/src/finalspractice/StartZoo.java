@@ -1,4 +1,4 @@
-package finalspractice_1;
+package finalspractice;
 
 public class StartZoo {
 
