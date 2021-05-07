@@ -13,10 +13,12 @@ public class StartZoo {
 		
 		// make an ArrayList to hold both exhibits 
 		
-		// Make a while loop that will repeat as long as there are unseen exhibits
+		// Make a while loop that will repeat as long as there are unseen exhibits (in this case it will run twice)
+		
 		// "Welcome to the Zoo. Push 'Enter' to visit the next exhibit.
-		// every time the user pushes enter display a description
-		// of the Exhibit and the animal that it contains.
+		
+		// every time the user pushes enter, display the name of the animal in the Exhibit
+		
 		// as you leave the loop thank the user for visiting the Zoo
 		
 		System.out.println("Welcome to the Zoo. Enjoy your journey of discovery today as you visit the exhibits.");

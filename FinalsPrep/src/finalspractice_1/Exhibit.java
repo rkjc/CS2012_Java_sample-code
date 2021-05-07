@@ -2,10 +2,13 @@ package finalspractice_1;
 
 public class Exhibit {
 	
-	// Enum Climate  arctic forest jungle desert
+	// Enum Climate  arctic, forest, jungle, desert   		
+		// make sure all the enum values are public 
+		// by convention the enum values should be capitalized 
 	
-	// list<Animal> animal 
-	// list<String> decorations 
-	// Climate environment   // a variable to store the climat type in
+	// ArrayList<Animal> animals
+	// ArrayList<String> decorations 
+	// Climate environment   // a variable to store the climate type in
 	
+	// add getters and setters
 }
