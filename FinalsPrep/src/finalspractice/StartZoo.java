@@ -10,9 +10,7 @@ public class StartZoo {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Zoo. Enjoy your journey of discovery today as you visit the exhibits.");
-
-		Scanner userinput = new Scanner(System.in);
-		
+	
 		LandAnimal animal_1 = new LandAnimal();
 		
 		animal_1.setTypeOfAnimal("Capybara");
@@ -36,6 +34,7 @@ public class StartZoo {
 		zoo.add(xhibit_1);
 		zoo.add(xhibit_2);
 		
+		Scanner userinput = new Scanner(System.in);
 		int count = 0;
 		while (count < zoo.size()) {
 			System.out.println("Press Enter to view next exhibit");
