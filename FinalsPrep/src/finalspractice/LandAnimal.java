@@ -7,8 +7,6 @@ public class LandAnimal extends Animal{
 
 	public enum CoveringType  {FUR,  SKIN,  SCALES};    
 
-	
-	// *these should be private
 	private String decoration;    // variable to store the description of color and patterns - for example "blue fur with orange spots"
 	private CoveringType covering;    //variable to store CoveringType 
 	

@@ -10,10 +10,8 @@ public class StartZoo {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the Zoo. Enjoy your journey of discovery today as you visit the exhibits.");
-		// command line program
+
 		Scanner userinput = new Scanner(System.in);
-		
-		// make 2 LandAnimal objects - fill in all their attributes
 		
 		LandAnimal animal_1 = new LandAnimal();
 		
@@ -25,9 +23,7 @@ public class StartZoo {
 		animal_1.setDecoration("medium length light brown fur");
 		
 		LandAnimal animal_2 = new LandAnimal("Zeebra", CoveringType.FUR,  FoodType.HERBIVOR, "Mule type of Brey", 150.5, "white and black stripes" );
-		
-		// make 2 Exhibit objects - set the climate
-		
+			
 		Exhibit xhibit_1 = new Exhibit();
 		xhibit_1.getDecorations().add("rocks");
 		xhibit_1.getAnimals().add(animal_1);
@@ -54,10 +50,7 @@ public class StartZoo {
 			count += 1;
 		}
 		
-
-		
 		System.out.println("--------------------------------");
-		System.out.println("Thank you for visiting the Zoo. Looking forward to seeing you again in the future!");
-		
+		System.out.println("Thank you for visiting the Zoo. Looking forward to seeing you again in the future!");	
 	}
 }
