@@ -66,6 +66,8 @@ VehicleRepair-MidTerm
 VisibilityAndAccess_demo
 WrapperClasses
 XGradeChecker
+XGradeChecker_2
+XGradeChecker_2/*
 ZZZ_bottomFiller_ZZZ
 bin/
 .classpath
